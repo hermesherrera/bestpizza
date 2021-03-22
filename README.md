@@ -1,24 +1,8 @@
-# bestpizza
+# Best Pizza
 
-## Project setup
-```
-npm install
-```
+This project resolve an a technical test pusblish by Ronald-Prato in a video on youtube, thanks for to share this information.
+Her repositorie is [https://github.com/Ronald-Prato/mcpizzeria/]https://github.com/Ronald-Prato/mcpizzeria/
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+# Version
+**v.0.0.1** Initial version
+In this version the data for the login is obtained from the public api using the email as username and password to login to the app.
