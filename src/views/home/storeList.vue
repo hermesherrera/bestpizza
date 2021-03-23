@@ -1,6 +1,6 @@
 <template>
     <div class="container">
-	<div class="item" v-for="store in data">
+	<div class="item" v-for="store in storesList">
 	    <div class="main_store">
 		<div class="main_logo">
 		    <img class="logo" :src=store.logo>
@@ -13,10 +13,12 @@
 </template>
 
 <script>
+    import { mapState } from 'vuex'
+
     export default {
-	props: {
-	    data: [Array, Object]
-	}
+	computed: {
+	    ...mapState(['storesList']),
+	},
     }
 </script>
 
@@ -59,7 +61,7 @@
 
     @media (min-width: 920px){
 	.container {
-	    height: 200%;
+	    height: 400px;
 	    margin-top: 50px;
 	}
     }

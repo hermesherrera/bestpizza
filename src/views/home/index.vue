@@ -5,7 +5,7 @@
 	    <mainTitle title="Pizzerías" />
 	    <secondTitle title="Tiendas" description="Escoge tu pizzería favorita" />
 	    <searchBar placeholder="Buscar una pizzería"/>
-	    <storeList :data="dataStores" />
+	    <storeList />
 	</div>
     </div>
 </template>
@@ -16,7 +16,6 @@
     import secondTitle from './secondTitle.vue'
     import searchBar from './searchBar.vue'
     import storeList from './storeList.vue'
-    import storesList from '../../storesList.json'
 
     export default {
 	data() {

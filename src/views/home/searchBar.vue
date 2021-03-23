@@ -1,8 +1,9 @@
 <template>
-    <div>
+    <div class="mt-3">
 	<b-input-group size="sm">
 	    <b-form-input 
 		:placeholder=placeholder	
+		@input="storesListFilter"
 	    ></b-form-input>
 	    <b-input-group-append>
 		<b-input-group-text>
@@ -14,9 +15,16 @@
 </template>
 
 <script>
+    import { mapActions } from 'vuex'
+
     export default {
 	props: {
 	    placeholder: String
-	}
+	},
+
+	methods: {
+	    ...mapActions(['storesListFilter'])
+	},
+
     }
 </script>
