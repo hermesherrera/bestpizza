@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="login">
 	<img :src="require('../../assets/logo.png')" class="logo_login">
 
 	<h2 class="mt-3">Bienvenido</h2>
@@ -104,6 +104,7 @@
 		    .then(response => {
 			if (response.data.length > 0){
 			    this.showToast('Información', `Bienvenido ${response.data[0].name}`, 'success')
+			    this.$router.push('home')
 			} else {
 			    this.showToast('Error', 'El usuario y/o contraseña errados', 'danger')
 			}
