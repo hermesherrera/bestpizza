@@ -66,6 +66,7 @@
 <script>
     import '../styles.css'
     import { required } from "vuelidate/lib/validators"
+    import { mapMutations } from 'vuex'
 
     export default {
 	data (){
@@ -81,6 +82,7 @@
         },
 
 	methods: {
+	    ...mapMutations({setLogin: 'SET_LOGIN'}),
 	    showToast(title, content, variant){
 		this.$bvToast.toast(content, {
 		    title: title,
@@ -104,6 +106,10 @@
 		    .then(response => {
 			if (response.data.length > 0){
 			    this.showToast('Información', `Bienvenido ${response.data[0].name}`, 'success')
+			    this.setLogin({
+				isLogged: true,
+				user: response.data[0],
+			    })
 			    this.$router.push('home')
 			} else {
 			    this.showToast('Error', 'El usuario y/o contraseña errados', 'danger')
